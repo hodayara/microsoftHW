@@ -31,7 +31,7 @@ try:
     blob_service_client2 = BlobServiceClient.from_connection_string(connect_str2)
 
     # Create a name for the container
-    container_name2 = "copy-from-a"
+    container_name2 = "copy-from-a "+ str(uuid.uuid4())
 
     # Create the container
     container_client2 = blob_service_client2.create_container(container_name2)
